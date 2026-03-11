@@ -1,0 +1,120 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #080338 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Encabezado */
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor principal */
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de imagen */
+.tarjeta-imagen {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+}
+
+.tarjeta-imagen:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+    border-color: #667eea;
+}
+
+/* Título de la tarjeta */
+.tarjeta-imagen h3 {
+    padding: 18px 16px;
+    color: #2d3748;
+    font-size: 1.25rem;
+    border-bottom: 4px solid #667eea;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta-imagen img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-imagen:hover img {
+    transform: scale(1.08);
+}
+
+/* Descripción */
+.tarjeta-imagen p {
+    padding: 16px;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+/* Botón (opcional) */
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 30px auto;
+}
+
+button:hover {
+    background: #764ba2;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    #contenedor {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .tarjeta-imagen img {
+        height: 200px;
+    }
+}
